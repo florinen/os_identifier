@@ -5,4 +5,7 @@
     - name: obtain OS version
       debug: 
         var: "{{ hostvars[inventory_hostname].ansible_distribution }}"
+      debug:
+        var: "{{ hostvars[inventory_hostname].ansible_distribution_version }}"
+    
         
