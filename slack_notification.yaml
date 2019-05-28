@@ -15,4 +15,4 @@
       slack:
       token: thetoken
       msg: '{{ inventory_hostname }} completed'
-    delegate_to: localhost
+      delegate_to: localhost
