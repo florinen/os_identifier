@@ -10,7 +10,7 @@
       register: redhat
     - set_fact: update="{{redhat}}"
       when: redhat.changed
-      
+
     - name: check for updates on Debian OS Family
       when: ansible_os_family == "Debian"
       shell: apt list --upgradable | grep ^linux-image | cat
@@ -22,6 +22,6 @@
     
     - name: Send notification message via Slack
       slack:
-      token: sOPRZjcLfju5ocUwaRrTHBg7
-      msg: '{{ inventory_hostname }} completed'
+        token: sOPRZjcLfju5ocUwaRrTHBg7
+        msg: '{{ inventory_hostname }} completed'
       delegate_to: localhost
