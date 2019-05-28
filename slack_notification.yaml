@@ -2,6 +2,15 @@
   become_user: ec2-user
   become_method: sudo
   tasks:
+    - name: check for upfates RedHat OS Family
+      when: ansible_os_family == "RedHat"
+      shell: yum check-update | grep ^kernel.x | cat
+      args:
+        warn: False
+      register: redhat
+    - set_fact: update="{{redhat}}"
+      when: redhat.changed
+    
     - name: Send notification message via Slack
       slack:
       token: thetoken
