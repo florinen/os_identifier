@@ -4,8 +4,8 @@
   tasks:
     - name: obtain OS version
       debug: 
-        var: "{{ hostvars[inventory_hostname].ansible_distribution }}"
+        msg: "{{ hostvars[inventory_hostname].ansible_distribution }}"
       debug:
-        var: "{{ hostvars[inventory_hostname].ansible_distribution_version }}"
+        msg: "{{ hostvars[inventory_hostname].ansible_distribution_version }}"
     
         
