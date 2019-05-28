@@ -5,6 +5,5 @@
     - name: obtain OS version
       debug: "{{ item }}"
       with_items: 
-        msg: 
-        - "{ hostvars[inventory_hostname].ansible_distribution }}"
+        var: "{ hostvars[inventory_hostname].ansible_distribution }}"
         
