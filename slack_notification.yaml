@@ -11,8 +11,8 @@
     - set_fact: update="{{redhat}}"
       when: redhat.changed
     
-    - name: Send notification message via Slack
-      slack:
-      token: thetoken
-      msg: '{{ inventory_hostname }} completed'
-      delegate_to: localhost
+   # - name: Send notification message via Slack
+   #   slack:
+   #   token: thetoken
+   #   msg: '{{ inventory_hostname }} completed'
+   #   delegate_to: localhost
