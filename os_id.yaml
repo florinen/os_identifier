@@ -3,5 +3,5 @@
   sudo: yes
   tasks:
     - name: obtain OS version
-    - debug:
+      debug:
         msg: "{{ hostvars[inventory_hostname].ansible_distribution }}"
