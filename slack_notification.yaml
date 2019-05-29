@@ -24,4 +24,4 @@
       slack:
         token: xoxp-646559458896-646526680293-648464729493-e968aedfc32fce8bc549a5cecc248ef1
         msg: '{{ inventory_hostname }} completed'
-      delegate_to: localhost
+      
